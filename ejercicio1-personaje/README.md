@@ -1,8 +1,8 @@
-#Ejercicio de React + ES6 - Personaje
+# Ejercicio de React + ES6 - Personaje
 
-##Objetivos: Fortalecer conocimientos de lo aprendido hasta ahora con ES6 y con REACT
+## Objetivos: Fortalecer conocimientos de lo aprendido hasta ahora con ES6 y con REACT
 
-###Datos: en un principio solo dejar los datos en memoria, no se require persistencia
+### Datos: en un principio solo dejar los datos en memoria, no se require persistencia
 
 Se requiere una app que permita ingresar los datos de dos personajes y crear dos botones para hacer que peleen.
 
