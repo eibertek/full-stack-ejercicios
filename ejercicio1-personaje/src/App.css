@@ -18,8 +18,17 @@
   font-size: 1.5em;
 }
 
-.App-intro {
-  font-size: large;
+.character {
+  float:left;
+  margin:5px;
+  border: 1px solid grey;
+}
+.charActive {
+  color: black;  
+}
+
+.charDead {
+  color: red;
 }
 
 @keyframes App-logo-spin {
