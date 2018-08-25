@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import AddEmployeeConnected from './container/Addemployee';
 export default class AddEmployee extends Component {
 
   state = {
@@ -11,7 +11,7 @@ export default class AddEmployee extends Component {
   onChange = e => this.setState({[e.target.name]: e.target.value });
 
   render() {
-    console.log(this.props);
+    console.log('Estas son las props del addEmployye', this.props);
     return (
       <div>
         {!this.props.stopit ? <AddEmployee stopit={true} />: null}        
