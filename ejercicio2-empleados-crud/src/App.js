@@ -3,7 +3,7 @@ import employeesData from './employees/employees.model';
 import Employee from './employees/employees.component';
 import logo from './logo.svg';
 import './App.css';
-import AddEmployee from './employees/addEmployee.component';
+import AddEmployee from './employees/container/Addemployee';
 import { GET_EMPLOYEES } from './employees/reducer';
 
 const employees = [
@@ -14,7 +14,8 @@ const employees = [
 
 class App extends Component {
   render() {
-    this.props.store.dispatch({ type: GET_EMPLOYEES});
+    this.props.store.dispatch({ type: GET_EMPLOYEES, 
+      employees:employees.map(empl => empl.getData())});
     return (
       <div className="App">
         <header className="App-header">
