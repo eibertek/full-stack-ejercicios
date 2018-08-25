@@ -5,7 +5,8 @@ import { addEmployee, getJSONData } from '../actions';
 
 const mapStateToProps = store => {
     return {
-        employees: store.employees
+        employees: store.employees,
+        editEmployee: store.editEmployee,
     };
 };
 

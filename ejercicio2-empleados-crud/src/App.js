@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Employee from './employees/employees.component';
 import logo from './logo.svg';
 import './App.css';
 import AddEmployee from './employees/container/Addemployee';
@@ -7,8 +6,8 @@ import employeesModel from './employees/employees.model';
 
 const employeesData = [
   new employeesModel('Mariano', 'Eiberman', '31234652'),
-  new employeesModel('Mariano', 'Eiberman', '31234652'),
-  new employeesModel('Mariano', 'Eiberman', '31234652'),
+  new employeesModel('Mariano', 'GOrosito', '31234652'),
+  new employeesModel('Mariano', 'Marconda', '31234652'),
 ];
 
 class App extends Component {
@@ -26,7 +25,11 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
         </header>
-          {employees && employees.map( employee => <div>{employee.name} {employee.lastName} ({employee.dni})</div>)}
+          {employees && employees.map( (employee, idx) => 
+              <div>
+                {employee.name} {employee.lastName} ({employee.dni})
+                <button onClick={ e =>this.props.toggleEdit(idx)} >Editar</button> 
+              </div>)}
           <AddEmployee />
       </div>
     );

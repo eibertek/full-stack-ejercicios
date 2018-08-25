@@ -1,9 +1,8 @@
 
-import { GET_EMPLOYEES, ADD_EMPLOYEE, GET_DATA } from '../reducer';
+import { GET_EMPLOYEES, ADD_EMPLOYEE, GET_DATA, TOGGLE_EDIT } from '../reducer';
 import { store } from '../../index';
 
 export const getEmployees = (employees) => {
-    console.log(employees, 'aca llamo a la acction');
     return { 
         type: GET_EMPLOYEES, 
         employees
@@ -14,6 +13,13 @@ export const addEmployee = (name, lastname, dni ) => {
     return { 
         type: ADD_EMPLOYEE, 
         payload: { name, lastname, dni, }
+    }
+}
+
+export const toggleEdit = (idx ) => {
+    return { 
+        type: TOGGLE_EDIT, 
+        idx,
     }
 }
 
