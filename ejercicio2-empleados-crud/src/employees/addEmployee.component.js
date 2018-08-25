@@ -13,14 +13,15 @@ export default class AddEmployee extends Component {
 
   render() {
     console.log('Estas son las props del addEmployye', this.props);
-    const { name, lastname, dni } = this.state;
+    const { name, lastName, dni } = this.state;
     return (
       <div>
-        {!this.props.stopit ? <AddEmployeeConnected stopit={true} />: null}        
           {Object.entries(this.state).map(valor => 
           <div> 
           {valor[0]} :<input onChange={this.onChange} name={valor[0]} /></div>)}
-        <button onClick={e => this.props.addEmployee({ name, lastname, dni})}>getEmployees</button>
+        <button onClick={e => this.props.addEmployee(name, lastName, dni)}>Add Employee</button>
+
+        <button onClick={() => this.props.getData()}>CLIK ME</button>
       </div>
     )
   }

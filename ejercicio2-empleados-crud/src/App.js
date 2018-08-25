@@ -17,14 +17,16 @@ class App extends Component {
     const employees = employeesData.map(employee => employee.getData());
     this.props.getEmployees(employees);
   }
-  
+
   render() {
+    const { employees } = this.props;
     return (
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
         </header>
+          {employees && employees.map( employee => <div>{employee.name} {employee.lastName} ({employee.dni})</div>)}
           <AddEmployee />
       </div>
     );
